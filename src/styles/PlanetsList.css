@@ -1,0 +1,117 @@
+/* src/styles/PlanetsList.css */
+
+body {
+    background-color: #07090f; /* Dark background color */
+    color: #ffffff; /* Text color */
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.planets-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px; /* Add padding for space around the content */
+}
+
+.planet-card {
+    width: 23%;
+    margin: 1%;
+    background-color: #2c3e50; /* Card background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Card box shadow */
+}
+
+.planet-card h3 {
+    margin-bottom: 10px;
+    color: #3498db; /* Header text color */
+}
+
+.load-more-button {
+    position: relative;
+    z-index: 2; /* Set a higher z-index value */
+    width: 150px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #3498db; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.load-more-button:hover {
+    background-color: #2ecc71; /* Change background color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    color: #ffffff; /* Change text color on hover */
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-bottom: 20px; /* Add margin to avoid overlapping with the button */
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db; /* Loader color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.planet-card:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.resident-button:hover {
+    background-color: #2ecc71; /* Change background color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    color: #ffffff; /* Change text color on hover */
+}
+
+  
+  /* ... (existing styles) */
+
+/* Star animation */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    background: #ffffff;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: twinkle 5s infinite;
+    z-index: 0;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  /* ... (existing styles) */
+  

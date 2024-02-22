@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,123 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+/* src/App.css */
+.app {
+  text-align: center;
+  margin: 20px;
 }
+
+.planets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.planet-card {
+  width: 23%;
+  margin: 1%;
+  background-color: rgba(44, 62, 80, 0.7); /* Translucent background color */
+  padding: 20px;
+  border: none; /* Remove border */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.planet-card:hover {
+  background-color: rgba(44, 62, 80, 1); /* Opaque background color on hover */
+}
+
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+/* src/App.css */
+.app {
+  text-align: center;
+  margin: 20px;
+}
+
+.planet-details {
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgba(44, 62, 80, 0.7); /* Translucent background color */
+  padding: 20px;
+  border: none; /* Remove border */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.planet-details:hover {
+  background-color: rgba(44, 62, 80, 1); /* Opaque background color on hover */
+}
+
+.planet-details h2 {
+  color: #3498db; /* Header text color */
+  margin-bottom: 10px;
+}
+
+.planet-details p {
+  color: #ffffff; /* Text color */
+  margin-bottom: 10px;
+}
+
+.planet-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.planet-details ul li {
+  color: #ffffff; /* Text color */
+  margin-bottom: 5px;
+}
+
+.planet-details a {
+  color: #3498db; /* Link color */
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.planet-details a:hover {
+  color: #2ecc71; /* Link color on hover */
+}
+.planet-details .stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.planet-details .star {
+  position: absolute;
+  background: #ffffff;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  animation: twinkle 5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+
